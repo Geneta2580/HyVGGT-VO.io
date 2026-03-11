@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <meta name="title" content="HyVGGT-VO: Tightly-Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Network">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
   <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
   <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="author" content="Junxiang Pang, Baojie Chen, Lipu Zhou">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
@@ -74,7 +75,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>HyVGGT-VO: Tightly-Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Network | Academic Research</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -177,6 +178,44 @@
     ]
   }
   </script>
+  <style>
+    /* 视频背景全屏容器 */
+    .hero-video-container {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* 视频强制铺满并居中裁剪 */
+    .hero-video-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 0;
+    }
+    
+    /* 半透明遮罩层 */
+    .hero-video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.85); 
+      z-index: 1;
+    }
+    
+    /* 保证内容在视频上方 */
+    .hero-content-wrapper {
+      position: relative;
+      z-index: 2; 
+    }
+  </style>
 </head>
 <body>
 
@@ -186,162 +225,79 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
+  
+  <section class="hero is-fullheight hero-video-container">
+
+    <video autoplay muted loop playsinline class="hero-video-bg">
+      <source src="static/videos/banner_video.mp4" type="video/mp4">
+    </video>
+    
+    <div class="hero-video-overlay"></div>
+  
+    <div class="hero-body hero-content-wrapper">
+      <div class="container is-max-widescreen has-text-centered">
         <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+          <div class="column is-full has-text-centered">
+            
+            <h1 class="title is-1 publication-title">HyVGGT-VO: Tightly-Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Network</h1>
+            
+            <div class="is-size-3 publication-authors mt-3">
+              <span class="author-block">Junxiang Pang,</span>
+              <span class="author-block">Baojie Chen,</span>
+              <span class="author-block">Lipu Zhou</span>
+            </div>
+  
+            <div class="is-size-3 publication-authors mt-4">
+              <span class="author-block">Beihang University</span>
+              <br>
+              <img src="static/images/beihang.png" alt="Beihang University" style="margin: 0.75rem auto 0 auto; display: block; max-width: 600px; height: auto;">
+            </div>
+  
+            <div class="publication-links mt-5">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
                   </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
+                  <span>Paper PDF</span>
+                </a>
+              </span>
+  
+              <span class="link-block">
+                <a href="https://github.com/Geneta2580/HyVGGT-VO" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
                   </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
+                  <span>GitHub Repo</span>
+                </a>
+              </span>
+  
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv Page</span>
                 </a>
               </span>
             </div>
+  
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+      <div class="column is-full"> <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Robust and accurate Visual Odometry (VO) serves as a fundamental prerequisite for a wide spectrum of intelligent applications, including autonomous mobile robotics, aerial vehicles and augmented reality. However, traditional geometry-based methods often suffer from tracking failures in texture-less environments and typically lack the capability for dense environmental representation. In contrast, recent deep learning-based approaches offer improved robustness, but their high computational cost often prevents high-frequency pose estimation. To address these limitations, we propose HyVGGT-VO, a tightly-coupled hybrid VO system that integrates a Visual Geometry Grounded Transformer (VGGT) into a traditional geometry-based framework. Specifically, we design an adaptive hybrid tracking front-end in which the tracking head of VGGT provides auxiliary guidance when conventional optical-flow tracking fails. Furthermore, we introduce a joint optimization framework with a skip-frame connection factor. This framework optimizes the VO poses and online-calibrated VGGT scale by integrating VGGT-predicted relative poses into the pose graph, thereby effectively mitigating drift. Extensive evaluations on public benchmarks demonstrate that the proposed method achieves superior accuracy and robustness compared with existing methods.
           </p>
         </div>
       </div>
@@ -351,47 +307,55 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Bechmark Evaluation</h2>
+    
+    <div class="columns is-multiline is-centered mt-4">
+      
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/demo/MH01_20x.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频。
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">EuRoC MH01</p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/demo/V101_20x.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频。
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">EuRoC V101</p>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/demo/kitti_09_10x.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频。
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 09</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/demo/kitti_10_10x.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频。
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 10</p>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
-
-
 
 
 <!-- Youtube video -->
@@ -399,7 +363,7 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3 has-text-centered">Customized Camera Demo</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
@@ -416,58 +380,102 @@
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Reconstruction Results</h2>
+    
+    <div class="columns is-multiline is-centered mt-4">
+      
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/ply/euroc_MH01.mp4" type="video/mp4">
           </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">EuRoC MH01</p>
         </div>
       </div>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/ply/euroc_V101.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">EuRoC V101</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/ply/kitti_04.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 04</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/ply/kitti_10.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 10</p>
+        </div>
+      </div>
+      
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/ply/orbec.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 10</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/ply/orbec.mp4" type="video/mp4">
+          </video>
+          <p class="subtitle is-6 mt-2 has-text-weight-semibold">Scene 6</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 <!-- End video carousel -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<section class="section">
+  <div class="container is-max-widescreen"> 
+    <h2 class="title is-3 has-text-centered">Method</h2>
+    
+    <div class="columns is-centered has-text-centered mt-4">
+      <div class="column is-11"> 
+        <img src="static/images/framework.png" alt="HyVGGT-VO System Framework" style="width: 100%; border-radius: 8px;">
+        <div class="content has-text-justified mt-3 is-size-6">
+          <p>
+            <b>Figure 1: System overview of HyVGGT-VO.</b> 
+            这里填入你的框架图详细说明。例如：系统接收图像输入，通过 VGGT 网络提取特征并提供辅助引导。随后结合传统的几何跟踪前端构成自适应混合跟踪模块。最后，系统通过联合优化框架输出高频、精确的里程计位姿。
+          </p>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
 
+    <div class="columns is-centered has-text-centered mt-6"> 
+      <div class="column is-9"> 
+        <img src="static/images/pgo.png" alt="Joint Optimization Framework with Skip-frame connection" style="width: 100%; border-radius: 8px;">
+        <div class="content has-text-justified mt-3 is-size-6">
+          <p>
+            <b>Figure 2: Illustration of the Joint Optimization Framework.</b> 
+            这里填入你的位姿图优化说明。例如：展示了包含跳帧连接因子（Skip-frame connection factor）的位姿图。该设计将 VGGT 预测的相对位姿整合进 PGO 中，联合优化 VO 位姿与在线标定的 VGGT 尺度，从而有效抑制漂移。
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
 
 
 <!--BibTex citation -->
@@ -480,12 +488,11 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@article{HyVGGT-VO2026,
+  title={HyVGGT-VO: Tightly-Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Network},
+  author={Junxiang Pang and Baojie Chen and Lipu Zhou},
+  journal={arXiv preprint arXiv:2603.05422},
+  year={2026}
 }</code></pre>
     </div>
 </section>
