@@ -78,8 +78,8 @@
   <title>HyVGGT-VO: Tightly-Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Network | Academic Research</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/ico.ico">
+  <link rel="apple-touch-icon" href="static/images/ico.ico">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -230,7 +230,7 @@
   <section class="hero is-fullheight hero-video-container">
 
     <video autoplay muted loop playsinline class="hero-video-bg">
-      <source src="static/videos/banner_video.mp4" type="video/mp4">
+      <source src="static/videos/tartan_ME007_5x.mp4" type="video/mp4">
     </video>
     
     <div class="hero-video-overlay"></div>
@@ -240,7 +240,13 @@
         <div class="columns is-centered">
           <div class="column is-full has-text-centered">
             
-            <h1 class="title is-1 publication-title">HyVGGT-VO: Tightly-Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Network</h1>
+            <h1 class="title is-1 publication-title">
+              HyVGGT-VO: Tightly-Coupled 
+              <span style="color: #ffad33;">Hy</span>brid 
+              <span style="color: #ffad33;">V</span>isual 
+              <span style="color: #ffad33;">O</span>dometry 
+              with Deep Feed-Forward Dense Network
+          </h1>
             
             <div class="is-size-3 publication-authors mt-3">
               <span class="author-block">Junxiang Pang,</span>
@@ -319,7 +325,7 @@
             <source src="static/videos/demo/MH01_20x.mp4" type="video/mp4">
             您的浏览器不支持 HTML5 视频。
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">EuRoC MH01</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">EuRoC MH01</p>
         </div>
       </div>
 
@@ -329,7 +335,7 @@
             <source src="static/videos/demo/V101_20x.mp4" type="video/mp4">
             您的浏览器不支持 HTML5 视频。
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">EuRoC V101</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">EuRoC V101</p>
         </div>
       </div>
 
@@ -339,7 +345,7 @@
             <source src="static/videos/demo/kitti_09_10x.mp4" type="video/mp4">
             您的浏览器不支持 HTML5 视频。
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 09</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">KITTI 09</p>
         </div>
       </div>
 
@@ -349,7 +355,7 @@
             <source src="static/videos/demo/kitti_10_10x.mp4" type="video/mp4">
             您的浏览器不支持 HTML5 视频。
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 10</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">KITTI 10</p>
         </div>
       </div>
 
@@ -359,21 +365,43 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3 has-text-centered">Customized Camera Demo</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Real-world Experiments</h2>
+    
+    <div class="columns is-centered has-text-centered mt-4">
+      <div class="column is-8"> <img src="static/images/camera.jpg" alt="Data Collection Device" style="width: 50%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div class="content has-text-justified mt-3 is-size-6">
+          <p>
+            <b>Figure 1: Data Collection Platform.</b> 
+            To validate the real-world applicability of our proposed HyVGGT-VO, we conducted comprehensive experiments in unconstrained environments. For data acquisition and live execution, we utilized the Orbbec Gemini 335 camera. In our experiments, the system is configured to operate in a strictly monocular setup, utilizing exclusively the left camera stream. All image sequences were captured at a resolution of 640 × 360 pixels and recorded at a constant frame rate of 30 Hz.
+          </p>
         </div>
       </div>
     </div>
+
+    <div class="columns is-multiline is-centered mt-5"> <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/demo/shahe_6x.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频。
+          </video>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">Empty Room</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="content has-text-centered">
+          <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
+            <source src="static/videos/demo/V101_20x.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频。
+          </video>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">EuRoC V101</p>
+        </div>
+      </div>
+      
+    </div>
+    
   </div>
 </section>
 <!-- End youtube video -->
@@ -391,7 +419,7 @@
           <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
             <source src="static/videos/ply/euroc_MH01.mp4" type="video/mp4">
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">EuRoC MH01</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">EuRoC MH01</p>
         </div>
       </div>
 
@@ -400,7 +428,7 @@
           <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
             <source src="static/videos/ply/euroc_V101.mp4" type="video/mp4">
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">EuRoC V101</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">EuRoC V101</p>
         </div>
       </div>
 
@@ -409,7 +437,7 @@
           <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
             <source src="static/videos/ply/kitti_04.mp4" type="video/mp4">
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 04</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">KITTI 04</p>
         </div>
       </div>
 
@@ -418,16 +446,16 @@
           <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
             <source src="static/videos/ply/kitti_10.mp4" type="video/mp4">
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 10</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">KITTI 10</p>
         </div>
       </div>
       
       <div class="column is-half">
         <div class="content has-text-centered">
           <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
-            <source src="static/videos/ply/orbec.mp4" type="video/mp4">
+            <source src="static/videos/ply/shahe.mp4" type="video/mp4">
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">KITTI 10</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">Empty Room</p>
         </div>
       </div>
 
@@ -436,7 +464,7 @@
           <video autoplay loop muted playsinline controls style="width: 100%; border-radius: 8px;">
             <source src="static/videos/ply/orbec.mp4" type="video/mp4">
           </video>
-          <p class="subtitle is-6 mt-2 has-text-weight-semibold">Scene 6</p>
+          <p class="subtitle is-5 mt-2 has-text-weight-semibold">Scene 6</p>
         </div>
       </div>
 
@@ -453,9 +481,9 @@
     <div class="columns is-centered has-text-centered mt-4">
       <div class="column is-11"> 
         <img src="static/images/framework.png" alt="HyVGGT-VO System Framework" style="width: 100%; border-radius: 8px;">
-        <div class="content has-text-justified mt-3 is-size-6">
+        <div class="content has-text-justified mt-3 is-size-5">
           <p>
-            <b>Figure 1: System overview of HyVGGT-VO.</b> 
+            <b>Figure 2: System overview of HyVGGT-VO.</b> 
             这里填入你的框架图详细说明。例如：系统接收图像输入，通过 VGGT 网络提取特征并提供辅助引导。随后结合传统的几何跟踪前端构成自适应混合跟踪模块。最后，系统通过联合优化框架输出高频、精确的里程计位姿。
           </p>
         </div>
@@ -465,9 +493,9 @@
     <div class="columns is-centered has-text-centered mt-6"> 
       <div class="column is-9"> 
         <img src="static/images/pgo.png" alt="Joint Optimization Framework with Skip-frame connection" style="width: 100%; border-radius: 8px;">
-        <div class="content has-text-justified mt-3 is-size-6">
+        <div class="content has-text-justified mt-3 is-size-5">
           <p>
-            <b>Figure 2: Illustration of the Joint Optimization Framework.</b> 
+            <b>Figure 3: Illustration of the Joint Optimization Framework.</b> 
             这里填入你的位姿图优化说明。例如：展示了包含跳帧连接因子（Skip-frame connection factor）的位姿图。该设计将 VGGT 预测的相对位姿整合进 PGO 中，联合优化 VO 位姿与在线标定的 VGGT 尺度，从而有效抑制漂移。
           </p>
         </div>
