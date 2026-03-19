@@ -7,7 +7,7 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="HyVGGT-VO: Tightly-Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Network">
+  <meta name="title" content="HyVGGT-VO: Tightly-Coupled Hybrid Dense Visual Odometry with Feed-Forward Models">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
@@ -481,22 +481,22 @@
     <div class="columns is-centered has-text-centered mt-4">
       <div class="column is-11"> 
         <img src="static/images/framework.png" alt="HyVGGT-VO System Framework" style="width: 100%; border-radius: 8px;">
-        <div class="content has-text-justified mt-3 is-size-5">
+        <div class="content has-text-justified mt-3 is-size-6">
           <p>
             <b>Figure 2: System overview of HyVGGT-VO.</b> 
-            这里填入你的框架图详细说明。例如：系统接收图像输入，通过 VGGT 网络提取特征并提供辅助引导。随后结合传统的几何跟踪前端构成自适应混合跟踪模块。最后，系统通过联合优化框架输出高频、精确的里程计位姿。
+            Taking a monocular image stream as input, the system features a hybrid tracking frontend and an asynchronous hierarchical optimization backend. The frontend adaptively couples efficient KLT optical flow with a robust VGGT tracking head to handle visual degradation. In the backend, the first stage performs covisibility-based local Bundle Adjustment (BA) for metric precision, while the second stage executes an asynchronous local Pose Graph Optimization (PGO) incorporating VGGT-predicted relative poses and an explicitly optimized scale factor to ensure consistency.
           </p>
         </div>
       </div>
     </div>
 
     <div class="columns is-centered has-text-centered mt-6"> 
-      <div class="column is-9"> 
+      <div class="column is-11"> 
         <img src="static/images/pgo.png" alt="Joint Optimization Framework with Skip-frame connection" style="width: 100%; border-radius: 8px;">
-        <div class="content has-text-justified mt-3 is-size-5">
+        <div class="content has-text-justified mt-3 is-size-6">
           <p>
-            <b>Figure 3: Illustration of the Joint Optimization Framework.</b> 
-            这里填入你的位姿图优化说明。例如：展示了包含跳帧连接因子（Skip-frame connection factor）的位姿图。该设计将 VGGT 预测的相对位姿整合进 PGO 中，联合优化 VO 位姿与在线标定的 VGGT 尺度，从而有效抑制漂移。
+            <b>Figure 3: Illustration of the Hierarchical Optimization Framework.</b> 
+            Our local PGO framework integrates two primary types of constraints: scale-aware keyframe constraints derived from VGGT pose predictions, and keyframe relative pose constraints provided by the traditional VO. To properly address the inherent scale ambiguity of VGGT network predictions, we explicitly model the scale factor as a distinct state variable. This structural design incorporates two consecutive VGGT sub-graphs that share an overlapping keyframe, which inherently binds the scale factor across continuous batches, ensuring a smooth scale trajectory within the local map and preventing scale drift.
           </p>
         </div>
       </div>
