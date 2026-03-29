@@ -241,7 +241,8 @@
           <div class="column is-full has-text-centered">
             
             <h1 class="title is-1 publication-title">
-              HyVGGT-VO: Tightly-Coupled 
+              <span style="color: #ffad33;">Hy</span>VGGT-<span style="color: #ffad33;">VO</span>: 
+              Tightly Coupled 
               <span style="color: #ffad33;">Hy</span>brid
               Dense
               <span style="color: #ffad33;">V</span>isual 
@@ -304,7 +305,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Simultaneous pose estimation and dense 3D scene reconstruction serve as the cornerstones for intelligent applications, ranging from mobile robotics to augmented reality. However, while traditional feature-based methods are computationally efficient, they exhibit less robustness and fundamentally lack dense environmental representation capabilities. Conversely, although recent feed-forward models excel at dense mapping, their high computational cost and slow inference speeds inherently prevent high-frequency pose estimation. To address these critical limitations, we propose HyVGGT-VO, a novel framework that synergizes the computational efficiency of traditional VO with the dense reconstruction capabilities of feed-forward models. To the best of our knowledge, this is the first work to tightly couple a traditional visual odometry framework with a VGGT-based architecture. Specifically, we design an adaptive hybrid tracking frontend in which the tracking head of VGGT provides auxiliary guidance when traditional optical-flow tracking fails. Furthermore, we introduce a hierarchical optimization framework that jointly refines VO poses and the scale of VGGT predictions to ensure global scale consistency. Our approach achieves an approximately 5&times real-time speedup compared to existing VGGT-based methods on the EuRoC dataset, while guaranteeing high precision pose estimation.
+            Dense visual odometry (VO), which provides pose estimation and dense 3D reconstruction, serves as the cornerstone for applications ranging from robotics to augmented reality. Recently, feed-forward models have demonstrated remarkable capabilities in dense mapping. However, when these models are used in dense visual SLAM systems, their heavy computational burden limits the SLAM systems to processing only selected keyframes, resulting in sparse pose outputs. In contrast, traditional sparse methods provide high computational efficiency and high-frequency pose outputs, but lack the capability for dense reconstruction. To address these limitations, we propose HyVGGT-VO, a novel framework that combines the computational efficiency of sparse VO with the dense reconstruction capabilities of feed-forward models. To the best of our knowledge, this is the first work to tightly couple a traditional VO framework with VGGT, a state-of-the-art feed-forward model. Specifically, we design an adaptive hybrid tracking frontend that dynamically switches between traditional optical flow and the VGGT tracking head to ensure robustness. Furthermore, we introduce a hierarchical optimization framework that jointly refines VO poses and the scale of VGGT predictions to ensure global scale consistency. Our approach achieves an approximately 5x processing speedup compared to existing VGGT-based methods, while reducing the average trajectory error by 85% on the indoor EuRoC dataset and 12% on the outdoor KITTI benchmark. Our code will be publicly available upon acceptance.
           </p>
         </div>
       </div>
@@ -376,7 +377,7 @@
         <div class="content has-text-justified mt-3 is-size-6">
           <p>
             <b>Figure 1: Data Collection Platform.</b> 
-            To validate the real-world applicability of our proposed HyVGGT-VO, we conducted comprehensive experiments in unconstrained environments. For data acquisition and live execution, we utilized the Orbbec Gemini 335 camera. In our experiments, the system is configured to operate in a strictly monocular setup, utilizing exclusively the left camera stream. All image sequences were captured at a resolution of 640 × 360 pixels and recorded at a constant frame rate of 30 Hz.
+            To validate the real-world applicability of our proposed HyVGGT-VO, we conducted experiments in real-world environments. For data acquisition and live execution, we utilized the Orbbec Gemini 335 camera. In our experiments, the system is configured to operate in a strictly monocular setup, utilizing exclusively the left camera stream. All image sequences were captured at a resolution of 640 × 360 pixels and recorded at a constant frame rate of 30 Hz.
           </p>
         </div>
       </div>
@@ -521,7 +522,7 @@
         </button>
       </div>
       <pre id="bibtex-code"><code>@article{HyVGGT-VO2026,
-  title={HyVGGT-VO: Tightly-Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Network},
+  title={HyVGGT-VO: Tightly Coupled Hybrid Visual Odometry with Deep Feed-Forward Dense Models},
   author={Junxiang Pang and Lipu Zhou and Baojie Chen},
   journal={arXiv preprint arXiv:2603.05422},
   year={2026}
